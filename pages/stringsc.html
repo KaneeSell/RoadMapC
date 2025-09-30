@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap Completo: Programação C para Iniciantes</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Etapa 10: Manipulação de Strings</h1>
+        <p>
+          Strings em C são vetores de caracteres terminados pelo caractere nulo
+          <b>\0</b>. Elas permitem armazenar e manipular textos, sendo
+          essenciais para entrada e saída de dados textuais.
+        </p>
+      </div>
+
+      <div class="content" style="display: flex">
+        <nav class="sidebar">
+          <ul>
+            <li><a class="nav-tab" href="../index.html">Página inicial</a></li>
+            <li>
+              <a class="nav-tab" href="devc.html">0001-Instalação DevC++</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="conceitos.html"
+                >0002-Conceitos Básicos</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="primeiro.html">0003-Primeiro Programa</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="variaveis.html"
+                >0004-Variáveis e Tipos de Dados</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="operadores.html">0005-Operadores em C</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="estruturas.html"
+                >0006-Estruturas de Controle</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="arrays.html"
+                >0007-Arrays (Vetores e Matrizes)</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="funcoes.html">0008-Funções em C</a>
+            </li>
+            <li><a class="nav-tab" href="ponteiros.html">0009-Ponteiros</a></li>
+            <li>
+              <a class="nav-tab active-nav" href="#">>>0010-Manipulação de Strings</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="structs.html"
+                >0011-Estruturas (Structs)</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="projetos.html">0012-Projetos Práticos</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div style="flex: 1">
+          <div class="content">
+            <div id="strings" class="tab-content active">
+              <h2 class="section-title">Manipulação de Strings</h2>
+
+              <p>
+                Strings são vetores de caracteres e podem ser manipuladas usando
+                funções da biblioteca <b>string.h</b>.
+              </p>
+
+              <div class="benefits-grid">
+                <div class="benefit-card">
+                  <div class="benefit-title">Declaração de Strings</div>
+                  <!-- Exemplo -->
+                  <div class="code-container">
+                    <div class="code-header">Exemplo</div>
+                    <div class="code">
+                      char nome[20] = "Daniel";<br />
+                      char sobrenome[] = "Henrique";
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefits-grid">
+                <div class="benefit-card">
+                  <div class="benefit-title">Funções básicas</div>
+                  <!-- Exemplo: strlen, strcpy e strcat -->
+                  <div class="code-container">
+                    <div class="code-header">
+                      Exemplo: strlen, strcpy e strcat
+                    </div>
+                    <div class="code">
+                      #include &lt;stdio.h&gt;<br />
+                      #include &lt;string.h&gt;<br /><br />
+                      int main() {<br />
+                      &nbsp;&nbsp;char nome[20] = "Daniel";<br />
+                      &nbsp;&nbsp;char sobrenome[20] = "Henrique";<br />
+                      &nbsp;&nbsp;printf("Tamanho do nome: %lu\\n",
+                      strlen(nome));<br />
+                      &nbsp;&nbsp;strcpy(nome, "Carlos");<br />
+                      &nbsp;&nbsp;strcat(nome, " Silva");<br />
+                      &nbsp;&nbsp;printf("Nome completo: %s\\n", nome);<br />
+                      &nbsp;&nbsp;return 0;<br />
+                      }
+                    </div>
+                  </div>
+                  <!-- Saida de dados -->
+                  <div class="code-container">
+                    <div class="code-header">Saída</div>
+                    <div class="code">
+                      Tamanho do nome: 6 Nome completo: Carlos Silva
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefits-grid">
+                <div class="benefit-card">
+                  <div class="benefit-title">Comparando Strings</div>
+                  <!-- Exemplo: strcmp -->
+                  <div class="code-container">
+                    <div class="code-header">Exemplo: strcmp</div>
+                    <div class="code">
+                      #include &lt;stdio.h&gt;<br />
+                      #include &lt;string.h&gt;<br /><br />
+                      int main() {<br />
+                      &nbsp;&nbsp;char senha1[] = "12345";<br />
+                      &nbsp;&nbsp;char senha2[] = "12345";<br />
+                      &nbsp;&nbsp;if(strcmp(senha1, senha2) == 0) {<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;printf("Senhas iguais\\n");<br />
+                      &nbsp;&nbsp;} else {<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;printf("Senhas diferentes\\n");<br />
+                      &nbsp;&nbsp;}<br />
+                      &nbsp;&nbsp;return 0;<br />
+                      }
+                    </div>
+                  </div>
+                  <!-- Saida de dados -->
+                  <div class="code-container">
+                    <div class="code-header">Saída</div>
+                    <div class="code">Senhas iguais</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="analogy-box">
+                <div class="analogy-title">Resumo</div>
+                <ul>
+                  <li>
+                    Strings são vetores de caracteres terminados por <b>\0</b>.
+                  </li>
+                  <li>
+                    Usar <b>string.h</b> para funções úteis: <b>strlen</b>,
+                    <b>strcpy</b>, <b>strcat</b>, <b>strcmp</b>.
+                  </li>
+                  <li>
+                    Permite manipular, concatenar, copiar e comparar textos.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,12 +1,18 @@
 # RoadMapWEB
-Web UX Prova - Avaliativa N1 - RoadMapWEB
 
-Alunos: Daniel, Italo, Fabricio, Samuel
+[![Banner](https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Web%20UX%20Prova)](https://kaneesell.github.io/WebUXProva/)
+
+A **Web UX Prova** é um projeto desenvolvido com **HTML e CSS**, oferece uma vasta gama de informações sobre programar em C usando DEV C++.
+
+Com esse projeto mostramos nosso conhecimento obtido ao decorrer das aulas de Web UX e Fundamentos de Programação.
 
 ---
 
-### Imagem referencia tela inicial
+>**Alunos:** Daniel, Italo, Fabricio, Samuel   
+**Professor:** Luiz Almeida Júnior
 
-![image.png](image.png)
+Web UX Prova - Avaliativa N1 - RoadMap
+[![Ir para Página](https://img.shields.io/badge/Ir_para_P%C3%A1gina-Web%20UX%20Prova-brightgreen)](https://kaneesell.github.io/WebUXProva/)
 
-Site referência RoadMap: [https://roadmap.sh/frontend](https://roadmap.sh/frontend)
+
+[![Banner](https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true&section=footer&descAlign=60)](https://kaneesell.github.io/WebUXProva/)

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap Completo: Programação C para Iniciantes</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Etapa 9: Ponteiros</h1>
+        <p>
+          Ponteiros em C são variáveis que armazenam o endereço de memória de
+          outras variáveis. Eles permitem manipular diretamente a memória,
+          passar valores por referência e criar estruturas mais complexas.
+        </p>
+      </div>
+
+      <div class="content" style="display: flex">
+        <nav class="sidebar">
+          <ul>
+            <li><a class="nav-tab" href="../index.html">Página inicial</a></li>
+            <li>
+              <a class="nav-tab" href="devc.html">0001-Instalação DevC++</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="conceitos.html"
+                >0002-Conceitos Básicos</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="primeiro.html">0003-Primeiro Programa</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="variaveis.html"
+                >0004-Variáveis e Tipos de Dados</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="operadores.html">0005-Operadores em C</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="estruturas.html"
+                >0006-Estruturas de Controle</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="arrays.html"
+                >0007-Arrays (Vetores e Matrizes)</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="funcoes.html">0008-Funções em C</a>
+            </li>
+            <li>
+              <a class="nav-tab active-nav" href="#">>>0009-Ponteiros</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="stringsc.html"
+                >0010-Manipulação de Strings</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="structs.html"
+                >0011-Estruturas (Structs)</a
+              >
+            </li>
+            <li>
+              <a class="nav-tab" href="projetos.html">0012-Projetos Práticos</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div style="flex: 1">
+          <div class="content">
+            <div id="ponteiros" class="tab-content active">
+              <h2 class="section-title">Ponteiros</h2>
+
+              <p>
+                Ponteiros armazenam o endereço de memória de variáveis,
+                permitindo acessar e modificar valores diretamente.
+              </p>
+
+              <div class="benefits-grid">
+                <div class="benefit-card">
+                  <div class="benefit-title">Declaração de Ponteiros</div>
+                  <p>
+                    Um ponteiro é declarado usando o símbolo
+                    <strong>*</strong> antes do nome da variável.
+                  </p>
+                  <!-- Exemplo -->
+                  <div class="code-container">
+                    <div class="code-header">Exemplo</div>
+                    <div class="code">
+                      int *p; // ponteiro para inteiro int x = 10;<br />
+                      p = &amp;x; // o ponteiro armazena o endereço de x
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefits-grid">
+                <div class="benefit-card">
+                  <div class="benefit-title">
+                    Acessando valores através de ponteiros
+                  </div>
+                  <p>
+                    Usa-se o operador <strong>*</strong> para acessar ou alterar
+                    o valor apontado pelo ponteiro.
+                  </p>
+                  <!-- Exemplo -->
+                  <div class="code-container">
+                    <div class="code-header">Exemplo</div>
+                    <div class="code">
+                      #include &lt;stdio.h&gt;<br /><br />
+                      int main() {<br />
+                      &nbsp;&nbsp;int x = 10;<br />
+                      &nbsp;&nbsp;int *p = &amp;x;<br />
+                      &nbsp;&nbsp;printf("Valor de x: %d\\n", *p);<br />
+                      &nbsp;&nbsp;*p = 20;<br />
+                      &nbsp;&nbsp;printf("Novo valor de x: %d\\n", x);<br />
+                      &nbsp;&nbsp;return 0;<br />
+                      }
+                    </div>
+                  </div>
+                  <!-- Saída de dados -->
+                  <div class="code-container">
+                    <div class="code-header">Saída</div>
+                    <div class="code">Valor de x: 10 Novo valor de x: 20</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefits-grid">
+                <div class="benefit-card">
+                  <div class="benefit-title">Ponteiros e Arrays</div>
+                  <p>
+                    Ponteiros podem ser usados para percorrer arrays, pois o
+                    nome do array é um ponteiro para o primeiro elemento.
+                  </p>
+                  <!-- Exemplo -->
+                  <div class="code-container">
+                    <div class="code-header">Exemplo</div>
+                    <div class="code">
+                      #include &lt;stdio.h&gt;<br /><br />
+                      int main() {<br />
+                      &nbsp;&nbsp;int numeros[3] = {1, 2, 3};<br />
+                      &nbsp;&nbsp;int *p = numeros;<br />
+                      &nbsp;&nbsp;for (int i = 0; i &lt; 3; i++) {<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;printf("Elemento %d: %d\\n", i,
+                      *(p + i));<br />
+                      &nbsp;&nbsp;}<br />
+                      &nbsp;&nbsp;return 0;<br />
+                      }
+                    </div>
+                  </div>
+                  <!-- Saída de dados -->
+                  <div class="code-container">
+                    <div class="code-header">Saída</div>
+                    <div class="code">
+                      Elemento 0: 1 Elemento 1: 2 Elemento 2: 3
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="analogy-box">
+                <div class="analogy-title">Resumo</div>
+                <ul>
+                  <li>Ponteiros armazenam endereços de memória.</li>
+                  <li>Permitem acessar e alterar valores diretamente.</li>
+                  <li>
+                    São úteis para trabalhar com arrays, funções e estruturas
+                    dinâmicas.
+                  </li>
+                  <li>Declarar corretamente o tipo de ponteiro é essencial.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

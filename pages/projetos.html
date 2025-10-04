@@ -8,177 +8,197 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Etapa 12: Projetos Práticos</h1>
-        <p>
-          Após estudar os conceitos básicos de C, é hora de colocar em prática o
-          que foi aprendido através de pequenos projetos. Esses exercícios
-          ajudam a consolidar o conhecimento e desenvolver lógica de
-          programação.
-        </p>
-      </div>
-
-      <div class="content" style="display: flex">
-        <nav class="sidebar">
+    <!-- Cabeçalho com título e objetivo da etapa -->
+    <header class="header">
+      <h1>Etapa 12: Projetos Práticos</h1>
+      <p>
+        Após estudar os conceitos básicos de C, é hora de colocar em prática o
+        que foi aprendido através de pequenos projetos. Esses exercícios ajudam
+        a consolidar o conhecimento e desenvolver lógica de programação.
+      </p>
+    </header>
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <!-- Navegação lateral (índice do curso) em modo sanfona -->
+      <nav class="sidebar accordion">
+        <details open>
+          <summary>Conteúdo</summary>
           <ul>
-            <li><a class="nav-tab" href="../index.html">Página inicial</a></li>
             <li>
-              <a class="nav-tab" href="devc.html">0001-Instalação DevC++</a>
+              <a class="nav-tab" href="../index.html">Página inicial</a>
             </li>
             <li>
-              <a class="nav-tab" href="conceitos.html"
+              <a class="nav-tab" href="./devc.html">0001-Instalação DevC++</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="./conceitos.html"
                 >0002-Conceitos Básicos</a
               >
             </li>
             <li>
-              <a class="nav-tab" href="primeiro.html">0003-Primeiro Programa</a>
+              <a class="nav-tab" href="./primeiro.html">0003-Primeiro Programa</a>
             </li>
             <li>
-              <a class="nav-tab" href="variaveis.html"
-                >0004-Variáveis e Tipos de Dados</a
+              <a class="nav-tab" href="./variaveis.html"
+                >0004-Variáveis e Tipos</a
               >
             </li>
             <li>
-              <a class="nav-tab" href="operadores.html">0005-Operadores em C</a>
+              <a class="nav-tab" href="./operadores.html"
+                >0005-Operadores em C</a
+              >
             </li>
             <li>
-              <a class="nav-tab" href="estruturas.html"
+              <a class="nav-tab" href="./estruturas.html"
                 >0006-Estruturas de Controle</a
               >
             </li>
+            <li><a class="nav-tab" href="./arrays.html">0007-Arrays</a></li>
+            <li><a class="nav-tab" href="./funcoes.html">0008-Funções</a></li>
             <li>
-              <a class="nav-tab" href="arrays.html"
-                >0007-Arrays (Vetores e Matrizes)</a
+              <a class="nav-tab" href="./ponteiros.html">0009-Ponteiros</a>
+            </li>
+            <li><a class="nav-tab" href="./stringsc.html">0010-Strings</a></li>
+            <li><a class="nav-tab" href="./structs.html">0011-Structs</a></li>
+            <li>
+              <a class="nav-tab active-nav" href="#"
+                >0012-Projetos Práticos</a
               >
-            </li>
-            <li>
-              <a class="nav-tab" href="funcoes.html">0008-Funções em C</a>
-            </li>
-            <li><a class="nav-tab" href="ponteiros.html">0009-Ponteiros</a></li>
-            <li>
-              <a class="nav-tab" href="stringsc.html"
-                >0010-Manipulação de Strings</a
-              >
-            </li>
-            <li>
-              <a class="nav-tab" href="structs.html"
-                >0011-Estruturas (Structs)</a
-              >
-            </li>
-            <li>
-              <a class="nav-tab active-nav" href="#">>>0012-Projetos Práticos</a>
             </li>
           </ul>
-        </nav>
+        </details>
+      </nav>
+      <!-- Área principal de conteúdo -->
+      <main>
+        <article>
+          <!-- Projetos Práticos -->
+          <section id="projetos" class="tab-content active">
+            <h2 class="section-title">Projetos Práticos</h2>
 
-        <div style="flex: 1">
-          <div class="content">
-            <div id="projetos" class="tab-content active">
-              <h2 class="section-title">Projetos Práticos</h2>
-
-              <p>
-                Os projetos práticos ajudam a consolidar os conceitos de C
-                aplicando-os em situações reais. Seguem alguns exemplos de
-                exercícios que podem ser feitos por iniciantes:
-              </p>
-
-              <div class="benefits-grid">
-                <div class="benefit-card">
-                  <div class="benefit-title">Calculadora Simples</div>
-                  <!-- Exemplo: Operações básicas -->
-                  <div class="code-container">
-                    <div class="code-header">Exemplo: Operações básicas</div>
-                    <div class="code">
-                      #include &lt;stdio.h&gt;<br /><br />
-                      int main() {<br />
-                      &nbsp;&nbsp;int a = 10, b = 5;<br />
-                      &nbsp;&nbsp;printf("Soma: %d\\n", a + b);<br />
-                      &nbsp;&nbsp;printf("Subtração: %d\\n", a - b);<br />
-                      &nbsp;&nbsp;printf("Multiplicação: %d\\n", a * b);<br />
-                      &nbsp;&nbsp;printf("Divisão: %d\\n", a / b);<br />
-                      &nbsp;&nbsp;return 0;<br />
-                      }
-                    </div>
-                  </div>
+            <p>
+              Os projetos práticos ajudam a consolidar os conceitos de C
+              aplicando-os em situações reais. Seguem alguns exemplos de
+              exercícios que podem ser feitos por iniciantes:
+            </p>
+          </section>
+          <!-- Cards de projetos com exemplos de código -->
+          <section class="benefits-grid">
+            <div class="benefit-card">
+              <h3 class="benefit-title">Calculadora Simples</h3>
+              <!-- Exemplo: Operações básicas -->
+              <div class="code-container">
+                <p class="code-header">Exemplo: Operações básicas</p>
+                <div class="code">
+                  #include &lt;stdio.h&gt;
+                  int main() {
+                  &nbsp;&nbsp;int a = 10, b = 5;
+                  &nbsp;&nbsp;printf("Soma: %d\\n", a + b);
+                  &nbsp;&nbsp;printf("Subtração: %d\\n", a - b);
+                  &nbsp;&nbsp;printf("Multiplicação: %d\\n", a * b);
+                  &nbsp;&nbsp;printf("Divisão: %d\\n", a / b);
+                  &nbsp;&nbsp;return 0;
+                  }
                 </div>
-              </div>
-
-              <div class="benefits-grid">
-                <div class="benefit-card">
-                  <div class="benefit-title">Jogo de Adivinhação</div>
-                  <!-- Exemplo: Número aleatório -->
-                  <div class="code-container">
-                    <div class="code-header">Exemplo: Número aleatório</div>
-                    <div class="code">
-                      #include &lt;stdio.h&gt;<br />
-                      #include &lt;stdlib.h&gt;<br />
-                      #include &lt;time.h&gt;<br /><br />
-                      int main() {<br />
-                      &nbsp;&nbsp;int numero, chute;<br />
-                      &nbsp;&nbsp;srand(time(NULL));<br />
-                      &nbsp;&nbsp;numero = rand() % 10 + 1;<br />
-                      &nbsp;&nbsp;printf("Tente adivinhar o número (1-10):
-                      ");<br />
-                      &nbsp;&nbsp;scanf("%d", &chute);<br />
-                      &nbsp;&nbsp;if(chute == numero) {<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;printf("Parabéns! Você
-                      acertou!\\n");<br />
-                      &nbsp;&nbsp;} else {<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;printf("Número correto: %d\\n",
-                      numero);<br />
-                      &nbsp;&nbsp;}<br />
-                      &nbsp;&nbsp;return 0;<br />
-                      }
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="benefits-grid">
-                <div class="benefit-card">
-                  <div class="benefit-title">Média de Números</div>
-                  <!-- Exemplo: Usando vetores -->
-                  <div class="code-container">
-                    <div class="code-header">Exemplo: Usando vetores</div>
-                    <div class="code">
-                      #include &lt;stdio.h&gt;<br /><br />
-                      int main() {<br />
-                      &nbsp;&nbsp;int numeros[5] = {10, 20, 30, 40, 50};<br />
-                      &nbsp;&nbsp;int soma = 0;<br />
-                      &nbsp;&nbsp;for(int i=0; i&lt;5; i++) {<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;soma += numeros[i];<br />
-                      &nbsp;&nbsp;}<br />
-                      &nbsp;&nbsp;printf("Média: %d\\n", soma / 5);<br />
-                      &nbsp;&nbsp;return 0;<br />
-                      }
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="analogy-box">
-                <div class="analogy-title">Resumo</div>
-                <ul>
-                  <li>Projetos ajudam a fixar conceitos aprendidos.</li>
-                  <li>
-                    É recomendável começar com programas simples e evoluir
-                    gradualmente.
-                  </li>
-                  <li>
-                    Praticar exercícios com vetores, funções e estruturas de
-                    controle reforça o aprendizado.
-                  </li>
-                  <li>
-                    Experimente criar pequenos programas do dia a dia para
-                    aplicar a lógica de programação.
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
+
+          <section class="benefits-grid">
+            <div class="benefit-card">
+              <h3 class="benefit-title">Jogo de Adivinhação</h3>
+              <!-- Exemplo: Número aleatório -->
+              <div class="code-container">
+                <p class="code-header">Exemplo: Número aleatório</p>
+                <p class="code">
+                  #include &lt;stdio.h&gt;
+                  #include &lt;stdlib.h&gt;
+                  #include &lt;time.h&gt;
+                  int main() {
+                  &nbsp;&nbsp;int numero, chute;
+                  &nbsp;&nbsp;srand(time(NULL));
+                  &nbsp;&nbsp;numero = rand() %
+                  10 + 1;
+                  &nbsp;&nbsp;
+                  printf("Tente adivinhar o número (1-10):");
+                  &nbsp;&nbsp;scanf("%d", &chute);
+                  &nbsp;&nbsp;if(chute == numero) {
+                  &nbsp;&nbsp;&nbsp;&nbsp;printf("Parabéns! Você acertou!\\n");
+                  &nbsp;&nbsp;} else {
+                  &nbsp;&nbsp;&nbsp;&nbsp;printf("Número correto: %d\\n",
+                  numero);
+                  &nbsp;&nbsp;}
+                  &nbsp;&nbsp;return 0;
+                  }
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Media de Números -->
+          <section class="benefits-grid">
+            <div class="benefit-card">
+              <h3 class="benefit-title">Média de Números</h3>
+              <!-- Exemplo: Usando vetores -->
+              <div class="code-container">
+                <p class="code-header">
+                  <strong>Exemplo:</strong> Usando vetores
+                </p>
+                <p class="code">
+                  #include &lt;stdio.h&gt;
+                  int main() {
+                  &nbsp;&nbsp;int numeros[5] = {10, 20, 30, 40, 50};
+                  &nbsp;&nbsp;int soma = 0;
+                  &nbsp;&nbsp;for(int i=0; i&lt;5; i++) {
+                  &nbsp;&nbsp;&nbsp;&nbsp;soma += numeros[i];
+                  &nbsp;&nbsp;}
+                  &nbsp;&nbsp;printf("Média: %d\\n", soma / 5);
+                  &nbsp;&nbsp;return 0;
+                  }
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Resumo com dicas práticas -->
+          <section class="analogy-box">
+            <div class="analogy-title">Resumo</div>
+            <ol style="list-style-type: disc">
+              <li>Projetos ajudam a fixar conceitos aprendidos.</li>
+              <li>
+                É recomendável começar com programas simples e evoluir
+                gradualmente.
+              </li>
+              <li>
+                Praticar exercícios com vetores, funções e estruturas de
+                controle reforça o aprendizado.
+              </li>
+              <li>
+                Experimente criar pequenos programas do dia a dia para aplicar a
+                lógica de programação.
+              </li>
+            </ol>
+          </section>
+        </article>
+      </main>
     </div>
+    <!-- Rodapé com links úteis e créditos -->
+    <footer class="site-footer" role="contentinfo">
+      <section class="footer-inner">
+        <div>
+          <a href="#top" class="buttons-footer">Voltar ao topo</a>
+          <a href="#" class="buttons-footer"
+            >Parabéns! Chegou ao Fim</a
+          >
+        </div>
+        <p><strong>Projeto:</strong> Roadmap Programação em C</p>
+        <p><strong>Professor:</strong> Luiz Almeida Júnior</p>
+        <p><strong>Equipe:</strong> Daniel, Fabrício, Ítalo, Samuel</p>
+        <p class="footer-links">
+          <a href="../index.html">Início</a>
+          |
+          <a href="./projetos.html">Projetos</a>
+          |
+          <a href="../LICENSE">Licença</a>
+        </p>
+      </section>
+    </footer>
   </body>
 </html>

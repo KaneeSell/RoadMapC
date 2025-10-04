@@ -8,19 +8,24 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Etapa 7: Arrays (Vetores e Matrizes)</h1>
-        <p>
-          Em C, <b>arrays</b> são estruturas que permitem armazenar vários
-          valores de um mesmo tipo em posições contíguas de memória.
-        </p>
-      </div>
-
-      <div class="content" style="display: flex">
-        <nav class="sidebar">
+    <!-- Cabeçalho com título e resumo da etapa -->
+    <header class="header">
+      <h1>Etapa 7: Arrays (Vetores e Matrizes)</h1>
+      <p>
+        Em C, <b>arrays</b> são estruturas que permitem armazenar vários valores
+        de um mesmo tipo em posições contíguas de memória.
+      </p>
+    </header>
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <!-- Navegação lateral (índice do curso) em modo sanfona -->
+      <nav class="sidebar accordion">
+        <details open>
+          <summary>Conteúdo</summary>
           <ul>
-            <li><a class="nav-tab" href="../index.html">Página inicial</a></li>
+            <li>
+              <a class="nav-tab" href="../index.html">Página inicial</a>
+            </li>
             <li>
               <a class="nav-tab" href="devc.html">0001-Instalação DevC++</a>
             </li>
@@ -34,7 +39,7 @@
             </li>
             <li>
               <a class="nav-tab" href="variaveis.html"
-                >0004-Variáveis e Tipos de Dados</a
+                >0004-Variáveis e Tipos</a
               >
             </li>
             <li>
@@ -45,179 +50,173 @@
                 >0006-Estruturas de Controle</a
               >
             </li>
+            <li><a class="nav-tab active-nav" href="#">0007-Arrays</a></li>
+            <li><a class="nav-tab" href="funcoes.html">0008-Funções</a></li>
             <li>
-              <a class="nav-tab active-nav" href="#"
-                >>>0007-Arrays (Vetores e Matrizes)</a
-              >
+              <a class="nav-tab" href="ponteiros.html">0009-Ponteiros</a>
             </li>
-            <li>
-              <a class="nav-tab" href="funcoes.html">0008-Funções em C</a>
-            </li>
-            <li><a class="nav-tab" href="ponteiros.html">0009-Ponteiros</a></li>
-            <li>
-              <a class="nav-tab" href="stringsc.html"
-                >0010-Manipulação de Strings</a
-              >
-            </li>
-            <li>
-              <a class="nav-tab" href="structs.html"
-                >0011-Estruturas (Structs)</a
-              >
-            </li>
+            <li><a class="nav-tab" href="stringsc.html">0010-Strings</a></li>
+            <li><a class="nav-tab" href="structs.html">0011-Structs</a></li>
             <li>
               <a class="nav-tab" href="projetos.html">0012-Projetos Práticos</a>
             </li>
           </ul>
-        </nav>
-
-        <div style="flex: 1">
-          <div class="content">
-            <div id="arrays" class="tab-content active">
-              <h2 class="section-title">Arrays (Vetores e Matrizes)</h2>
-
-              <p>
-                Arrays permitem armazenar múltiplos valores do mesmo tipo em
-                posições contíguas de memória.
-              </p>
-
-              <div class="benefits-grid">
-                <div class="benefit-card">
-                  <div class="benefit-title">Vetores (Unidimensionais)</div>
-                  <p>
-                    Um vetor é uma coleção de elementos do mesmo tipo, acessados
-                    por <b>índices</b> começando em <b>0</b>.
-                  </p>
-                  <!-- Declaração de Vetor -->
-                  <div class="code-container">
-                    <div class="code-header">Declaração de Vetor</div>
-                    <div class="code">tipo nome[tamanho];</div>
-                  </div>
-                  <!-- Exemplo de Vetor -->
-                  <div class="code-container">
-                    <div class="code-header">Exemplo de Vetor</div>
-                    <div class="code">
-                      #include &lt;stdio.h&gt;<br />
-                      int main() {<br />
-                      &nbsp;&nbsp;int numeros[5] = {10, 20, 30, 40, 50};<br />
-                      &nbsp;&nbsp;for (int i = 0; i &lt; 5; i++) {<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;printf("Elemento %d: %d\n", i,
-                      numeros[i]);<br />
-                      &nbsp;&nbsp;}<br />
-                      &nbsp;&nbsp;return 0;<br />
-                      }
-                    </div>
-                  </div>
-                  <!-- Saída de dados -->
-                  <div class="code-container">
-                    <div class="code-header">Saída</div>
-                    <div class="code">
-                      Elemento 0: 10<br />
-                      Elemento 1: 20<br />
-                      Elemento 2: 30<br />
-                      Elemento 3: 40<br />
-                      Elemento 4: 50
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="benefits-grid">
-                <div class="benefit-card">
-                  <div class="benefit-title">
-                    2. Matrizes (Multidimensionais)
-                  </div>
-                  <p>
-                    Uma matriz é um array de arrays, geralmente com linhas e
-                    colunas.
-                  </p>
-                  <!-- Declaração de Matriz -->
-                  <div class="code-container">
-                    <div class="code-header">Declaração de Matriz</div>
-                    <div class="code">tipo nome[linhas][colunas];</div>
-                  </div>
-                  <!-- Exemplo de Matriz -->
-                  <div class="code-container">
-                    <div class="code-header">Exemplo de Matriz</div>
-                    <div class="code">
-                      #include &lt;stdio.h&gt;<br />
-                      int main() {<br />
-                      &nbsp;&nbsp;int matriz[2][3] = {<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;{1, 2, 3},<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;{4, 5, 6}<br />
-                      &nbsp;&nbsp;};<br />
-                      &nbsp;&nbsp;for (int i = 0; i &lt; 2; i++) {<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;for (int j = 0; j &lt; 3; j++)
-                      {<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("matriz[%d][%d]
-                      = %d\n", i, j, matriz[i][j]);<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;}<br />
-                      &nbsp;&nbsp;}<br />
-                      &nbsp;&nbsp;return 0;<br />
-                      }
-                    </div>
-                  </div>
-                  <!-- Saida de dados -->
-                  <div class="code-container">
-                    <div class="code-header">Saída</div>
-                    <div class="code">
-                      matriz[0][0] = 1<br />
-                      matriz[0][1] = 2<br />
-                      matriz[0][2] = 3<br />
-                      matriz[1][0] = 4<br />
-                      matriz[1][1] = 5<br />
-                      matriz[1][2] = 6
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="benefits-grid">
-                <div class="benefit-card">
-                  <div class="benefit-title">Características importantes</div>
-                  <ul>
-                    <li>Tamanho do array é fixo e definido na compilação.</li>
-                    <li>Índices começam em 0.</li>
-                    <li>
-                      Acessar fora do limite causa comportamento indefinido.
-                    </li>
-                    <li>
-                      Strings em C são vetores de caracteres terminados por
-                      <b>\0</b>.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="benefits-grid">
-                <div class="benefit-card">
-                  <div class="benefit-title">Exemplo com Strings</div>
-                  <!-- Exemplo -->
-                  <div class="code-container">
-                    <div class="code-header">Exemplo</div>
-                    <div class="code">
-                      #include &lt;stdio.h&gt;<br />
-                      int main() {<br />
-                      &nbsp;&nbsp;char nome[20] = "Daniel";<br />
-                      &nbsp;&nbsp;printf("Nome: %s\n", nome);<br />
-                      &nbsp;&nbsp;printf("Primeira letra: %c\n", nome[0]);<br />
-                      &nbsp;&nbsp;return 0;<br />
-                      }
-                    </div>
-                  </div>
-                  <!-- Saída de dados -->
-                  <div class="code-container">
-                    <div class="code-header">Saída</div>
-                    <div class="code">
-                      Nome: Daniel<br />
-                      Primeira letra: D
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </details>
+      </nav>
+      <!-- Área principal de conteúdo -->
+      <main>
+        <article>
+          <section id="arrays" class="tab-content active">
+            <h2 class="section-title">Arrays (Vetores e Matrizes)</h2>
+            <p>
+              Arrays permitem armazenar múltiplos valores do mesmo tipo em
+              posições contíguas de memória.
+            </p>
+          </section>
+          <!-- Vetores (Unidimensionais) -->
+          <section class="benefit-card">
+            <h3 class="benefit-title">Vetores (Unidimensionais)</h3>
+            <p>
+              Um vetor é uma coleção de elementos do mesmo tipo, acessados por
+              <b>índices</b> começando em <b>0</b>.
+            </p>
+            <!-- Exemplo guiado: declaração de vetor -->
+            <div class="code-container">
+              <h3 class="code-header">Declaração de Vetor</h3>
+              <p class="code">tipo nome[tamanho];</p>
             </div>
-          </div>
-        </div>
-      </div>
+            <!-- Exemplo prático de vetor -->
+            <div class="code-container">
+              <h3 class="code-header">Exemplo de Vetor</h3>
+              <p class="code">
+                #include &lt;stdio.h&gt;
+                int main() {
+                &nbsp;&nbsp;int numeros[5] = {10, 20, 30, 40, 50};
+                &nbsp;&nbsp;for (int i = 0; i &lt; 5; i++) {
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("Elemento %d: %d\n", i,
+                numeros[i]);
+                &nbsp;&nbsp;}
+                &nbsp;&nbsp;return 0;
+                }
+              </p>
+            </div>
+            <!-- Saída esperada do programa -->
+            <div class="code-container">
+              <h3 class="code-header">Saída</h3>
+              <p class="code">
+                Elemento 0: 10
+                Elemento 1: 20
+                Elemento 2: 30
+                Elemento 3: 40
+                Elemento 4: 50
+              </p>
+            </div>
+          </section>
+          <!-- Matrizes (Multidimensionais) -->
+          <section class="benefit-card">
+            <h3 class="benefit-title">Matrizes (Multidimensionais)</h3>
+            <p>
+              Uma matriz é um array de arrays, geralmente com linhas e colunas.
+            </p>
+            <!-- Exemplo guiado: declaração de matriz -->
+            <div class="code-container">
+              <h3 class="code-header">Declaração de Matriz</h3>
+              <p class="code">tipo nome[linhas][colunas];</p>
+            </div>
+            <!-- Exemplo prático de matriz -->
+            <div class="code-container">
+              <h3 class="code-header">Exemplo de Matriz</h3>
+              <p class="code">
+                #include &lt;stdio.h&gt;
+                int main() {
+                &nbsp;&nbsp;int matriz[2][3] = {
+                &nbsp;&nbsp;&nbsp;&nbsp;{1, 2, 3},
+                &nbsp;&nbsp;&nbsp;&nbsp;{4, 5, 6}
+                &nbsp;&nbsp;};
+                &nbsp;&nbsp;for (int i = 0; i &lt; 2; i++) {
+                &nbsp;&nbsp;&nbsp;&nbsp;for (int j = 0; j &lt; 3; j++) {
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("matriz[%d][%d] =
+                %d\n", i, j, matriz[i][j]);
+                &nbsp;&nbsp;&nbsp;&nbsp;}
+                &nbsp;&nbsp;}
+                &nbsp;&nbsp;return 0;
+                }
+              </p>
+            </div>
+            <!-- Saída esperada do programa -->
+            <div class="code-container">
+              <h3 class="code-header">Saída</h3>
+              <p class="code">
+                matriz[0][0] = 1
+                matriz[0][1] = 2
+                matriz[0][2] = 3
+                matriz[1][0] = 4
+                matriz[1][1] = 5
+                matriz[1][2] = 6
+              </p>
+            </div>
+          </section>
+          <!-- Características importantes -->
+          <section class="benefit-card">
+            <h3 class="benefit-title">Características importantes</h3>
+            <ol style="list-style: decimal;">
+              <li>Tamanho do array é fixo e definido na compilação.</li>
+              <li>Índices começam em 0.</li>
+              <li>Acessar fora do limite causa comportamento indefinido.</li>
+              <li>
+                Strings em C são vetores de caracteres terminados por
+                <strong>\0</strong>.
+              </li>
+            </ol>
+          </section>
+          <!-- Exemplo com Strings -->
+          <section class="benefit-card">
+            <h3 class="benefit-title">Exemplo com Strings</h3>
+            <!-- Exemplo -->
+            <div class="code-container">
+              <h3 class="code-header">Exemplo</h3>
+              <p class="code">
+                #include &lt;stdio.h&gt;
+                int main() {
+                &nbsp;&nbsp;char nome[20] = "Daniel";
+                &nbsp;&nbsp;printf("Nome: %s\n", nome);
+                &nbsp;&nbsp;printf("Primeira letra: %c\n", nome[0]);
+                &nbsp;&nbsp;return 0;
+                }
+              </p>
+            </div>
+            <!-- Saída de dados -->
+            <div class="code-container">
+              <h3 class="code-header">Saída</h3>
+              <p class="code">
+                Nome: Daniel
+                Primeira letra: D
+              </p>
+            </div>
+          </section>
+        </article>
+      </main>
     </div>
+    <!-- Rodapé com links úteis e créditos -->
+    <footer class="site-footer" role="contentinfo">
+      <section class="footer-inner">
+        <div>
+          <a href="#top" class="buttons-footer">Voltar ao topo</a>
+          <a href="./funcoes.html" class="buttons-footer"
+            >Proxima página: 0008-Funções</a
+          >
+        </div>
+        <p><strong>Projeto:</strong> Roadmap Programação em C</p>
+        <p><strong>Professor:</strong> Luiz Almeida Júnior</p>
+        <p><strong>Equipe:</strong> Daniel, Fabrício, Ítalo, Samuel</p>
+        <p class="footer-links">
+          <a href="../index.html">Início</a>
+          |
+          <a href="./projetos.html">Projetos</a>
+          |
+          <a href="../LICENSE">Licença</a>
+        </p>
+      </section>
+    </footer>
   </body>
 </html>

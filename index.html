@@ -8,16 +8,20 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Dev-C++</h1>
-        <p>Aprenda a organizar seu código de forma eficiente e profissional</p>
-      </div>
+    <!-- Cabeçalho com título e descrição -->
+    <header class="header">
+      <h1>Dev-C++</h1>
+      <p>Aprenda a organizar seu código de forma eficiente e profissional</p>
+    </header>
+    <!-- Container principal do layout -->
 
-      <div class="content" style="display: flex">
-        <nav class="sidebar">
+    <div class="content">
+      <!-- Navegação lateral (índice do roadmap) -->
+      <nav class="sidebar accordion">
+        <details open>
+          <summary>Conteúdo</summary>
           <ul>
-            <li><a class="nav-tab active-nav" href="#">>>Página inicial</a></li>
+            <li><a class="nav-tab active-nav" href="#">Página inicial</a></li>
             <li>
               <a class="nav-tab" href="./pages/devc.html"
                 >0001-Instalação DevC++</a
@@ -35,7 +39,7 @@
             </li>
             <li>
               <a class="nav-tab" href="./pages/variaveis.html"
-                >0004-Variáveis e Tipos de Dados</a
+                >0004-Variáveis e Tipos</a
               >
             </li>
             <li>
@@ -49,14 +53,10 @@
               >
             </li>
             <li>
-              <a class="nav-tab" href="./pages/arrays.html"
-                >0007-Arrays (Vetores e Matrizes)</a
-              >
+              <a class="nav-tab" href="./pages/arrays.html">0007-Arrays</a>
             </li>
             <li>
-              <a class="nav-tab" href="./pages/funcoes.html"
-                >0008-Funções em C</a
-              >
+              <a class="nav-tab" href="./pages/funcoes.html">0008-Funções</a>
             </li>
             <li>
               <a class="nav-tab" href="./pages/ponteiros.html"
@@ -64,14 +64,10 @@
               >
             </li>
             <li>
-              <a class="nav-tab" href="./pages/stringsc.html"
-                >0010-Manipulação de Strings</a
-              >
+              <a class="nav-tab" href="./pages/stringsc.html">0010-Strings</a>
             </li>
             <li>
-              <a class="nav-tab" href="./pages/structs.html"
-                >0011-Estruturas (Structs)</a
-              >
+              <a class="nav-tab" href="./pages/structs.html">0011-Structs</a>
             </li>
             <li>
               <a class="nav-tab" href="./pages/projetos.html"
@@ -79,39 +75,76 @@
               >
             </li>
           </ul>
-        </nav>
-        <div style="flex: 1">
-          <div class="content">
-            <div id="conceitos" class="tab-content active">
-              <h2 class="section-title">
-                Bem-vindos ao Roadmap Completo de Programação C
-              </h2>
-              <img
-                src="./assets/img/imagem.jpg"
-                alt="Dev-C++ Logo"
-                style="max-width: 200px; display: block; margin: 20px auto"
-              />
-              <div class="subsection-title">Descrição</div>
-              <p>
-                Este roadmap foi criado para ajudar quem está começando a
-                aprender Programação em C, de forma clara e passo a passo. Ele
-                mostra o caminho desde a instalação do programa até os conceitos
-                básicos, facilitando o aprendizado mesmo para quem nunca
-                programou antes.
-              </p>
-              <br/>
-              <div class="intro-paragraph">
-                  <div class="paragraph-title">Informações da Equipe</div>
-                  <div class="content-paragraph">
-                      <p><strong>Professor: </strong>Luiz Almeida Júnior</p>
-                      <p><strong>Alunos: </strong>Daniel, Fabrício, Ítalo, Samuel.</p>
-                  </div>
-              </div>
-              <br/>
+        </details>
+      </nav>
+      <!-- Área principal de conteúdo -->
+      <main>
+        <article>
+          <section id="conceitos" class="tab-content active">
+            <!-- Seção de boas-vindas -->
+            <h2 class="section-title">
+              Bem-vindos ao Roadmap Completo de Programação C
+            </h2>
+            <!-- Ilustração/Logo -->
+            <img
+              src="./assets/img/imagem.jpg"
+              alt="Dev-C++ Logo"
+              style="max-width: 200px; display: block; margin: 20px auto"
+            />
+          </section>
+          <!-- Descrição geral do material -->
+          <section>
+            <h3 class="subsection-title">Descrição</h3>
+            <p>
+              Este roadmap foi criado para ajudar quem está começando a aprender
+              Programação em C, de forma clara e passo a passo. Ele mostra o
+              caminho desde a instalação do programa até os conceitos básicos,
+              facilitando o aprendizado mesmo para quem nunca programou antes.
+            </p>
+          </section>
+
+          <!-- Testes Dev -->
+          <!-- <section>
+            <h3 class="subsection-title">Imagem do RoadMap</h3>
+            <div class="container-img">
+              <img class="img-roadmap" src="./imgxxx/Background.png" alt="Imagem RoadMap"/>
+              <span id="instalacao">
+                Instalação DevC++ >>
+              </span>
             </div>
-          </div>
-        </div>
-      </div>
+          </section> -->
+
+          <!-- Créditos/Informações da equipe -->
+          <section class="code-container">
+            <h3 class="code-header">Informações da Equipe</h3>
+            <p class="code">
+              <strong>Professor: </strong>Luiz Almeida Júnior
+              <strong>Alunos: </strong>Daniel, Fabrício, Ítalo, Samuel.
+            </p>
+          </section>
+        </article>
+      </main>
     </div>
+    <!-- Rodapé com links úteis e créditos -->
+    <footer class="site-footer" role="contentinfo">
+      <section class="footer-inner">
+        <div>
+          <a href="#top" class="buttons-footer">Voltar ao topo</a>
+          <a href="./pages/devc.html" class="buttons-footer"
+            >Proxima página: 0001-Instalação DevC++</a
+          >
+        </div>
+        <p><strong>Projeto:</strong> Roadmap Programação em C</p>
+        <p><strong>Professor:</strong> Luiz Almeida Júnior</p>
+        <p><strong>Equipe:</strong> Daniel, Fabrício, Ítalo, Samuel</p>
+        <p class="footer-links">
+          <a href="#top">Início</a>
+          |
+          <a href="./pages/projetos.html">Projetos</a>
+          |
+          <a href="./LICENSE">Licença</a>
+        </p>
+      </section>
+    </footer>
   </body>
 </html>

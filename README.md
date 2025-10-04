@@ -2,13 +2,10 @@
 
 [![Banner](https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Web%20UX%20Prova)](https://kaneesell.github.io/RoadMapC/)
 
-<header>
 - *Alunos:* Daniel, Ítalo, Fabrício, Samuel
 - *Professor:* Luiz Almeida Júnior
 - *Disciplina:* Web UX / Fundamentos de Programação (Avaliação N1)
-</header>
 
-<main>
 Bem-vindo ao RoadMapC — um pequeno guia feito pelos alunos para ajudar quem está começando a programar em C.
 
 ### O que este projeto faz
@@ -35,7 +32,6 @@ Bem-vindo ao RoadMapC — um pequeno guia feito pelos alunos para ajudar quem es
 ### Resumindo
 
 Este repositório é um material de apoio: direto ao ponto, pensado para facilitar a primeira aproximação com a linguagem C e com boas práticas básicas de apresentação de conteúdo.
-</main>
 ---
 
 Autores e contexto
@@ -89,7 +85,6 @@ Notas de acessibilidade e usabilidade
 
 O site foi construído com simplicidade em mente. Se você notar dificuldades de leitura, problemas de contraste ou qualquer comportamento estranho em navegadores específicos, abra uma issue com uma descrição curta e nós vamos verificar.
 
-<footer>
 ### Agradecimentos
 
 Agradecemos ao professor Luiz Almeida Júnior pelo acompanhamento e aos colegas de equipe pelo trabalho colaborativo.
@@ -105,7 +100,6 @@ Este projeto está sob a licença MIT — consulte o arquivo LICENSE para mais d
 ---
 
 Se quiser contribuir (texto, imagens ou exemplos), abra uma issue ou envie um Pull Request — será um prazer revisar e aceitar melhorias.
-</footer>
 
 [![Ir para Página](https://img.shields.io/badge/Ir_para_P%C3%A1gina-Web%20UX%20Prova-brightgreen)](https://kaneesell.github.io/RoadMapC/)
 

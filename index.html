@@ -103,17 +103,60 @@
             </p>
           </section>
 
-          <!-- Testes Dev -->
-          <!-- <section>
-            <h3 class="subsection-title">Imagem do RoadMap</h3>
-            <div class="container-img">
-              <img class="img-roadmap" src="./imgxxx/Background.png" alt="Imagem RoadMap"/>
-              <span id="instalacao">
-                Instalação DevC++ >>
-              </span>
-            </div>
-          </section> -->
+          <div class="roadmap">
+            <!-- botão iniciar -->
+            <input id="start" type="checkbox" />
+            <label for="start" class="btn-start">🚀 Iniciar Roadmap</label>
 
+            <!-- container com inputs/labels e, por fim, a linha -->
+            <div class="roadmap-container">
+              <!-- linha vem por último NO DOM para ser alcançada pelos ~ -->
+              <div class="roadmap-line line-1" aria-hidden="true"></div>
+
+              <!-- passo 1 -->
+              <input id="step1" type="checkbox" />
+              <label for="step1" class="roadmap-item item-1"
+                >1 — Instalação DevC++</label
+              >
+
+              <div class="roadmap-line line-2" aria-hidden="true"></div>
+
+              <!-- passo 2 -->
+              <input id="step2" type="checkbox" />
+              <label for="step2" class="roadmap-item item-2"
+                >2 — Conceitos Básicos</label
+              >
+
+              <div class="roadmap-line line-3" aria-hidden="true"></div>
+
+              <!-- passo 3 -->
+              <input id="step3" type="checkbox" />
+              <label for="step3" class="roadmap-item item-3"
+                >3 — Primeiro Programa</label
+              >
+
+              <div class="roadmap-line line-4" aria-hidden="true"></div>
+
+              <!-- passo 4 -->
+              <input id="step4" type="checkbox" />
+              <label for="step4" class="roadmap-item item-4"
+                >4 — Variáveis e Tipos</label
+              >
+
+              <div class="roadmap-line line-5" aria-hidden="true"></div>
+
+              <!-- passo 5 -->
+              <input id="step5" type="checkbox" />
+              <label for="step5" class="roadmap-item item-5"
+                >5 — Operadores em C</label
+              >
+
+              <div class="roadmap-line line-6" aria-hidden="true"></div>
+
+              <!-- passo 5 -->
+              <h4 id="fim" class="roadmap-fim">🎉 FIM 🎉</h4>
+            </div>
+          </div>
           <!-- Créditos/Informações da equipe -->
           <section class="code-container">
             <h3 class="code-header">Informações da Equipe</h3>

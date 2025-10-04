@@ -4,6 +4,8 @@
 :root {
   --primary-color: #667eea;
   --secondary-color: #764ba2;
+  --sucess-color: #43fc4c;
+  --sucess-border-color: #00bb09;
   --accent-color: #f8f9fa;
   --text-color: #333;
   --background-color: #f4f5f7;
@@ -101,6 +103,187 @@ header p {
   margin: 0 5px 30px 5px;
   width: 99%;
   max-width: 80em;
+}
+
+/* ======================= */
+    /* RoadMap    */
+/* =======================  */
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+/* botão Iniciar */
+.btn-start {
+  background: var(--primary-color);
+  color: #fff;
+  padding: .7rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, .12);
+  z-index: 3;
+}
+
+/* container reserva espaço */
+.roadmap-container {
+  max-width: 90%;
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  /* controle espaço entre itens */
+  position: relative;
+}
+
+/* linha (depois dos inputs no DOM) */
+.roadmap-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -17px;
+  /* distanciamento do topo do container */
+  width: 6px;
+  height: 0;
+  /* começa com 0; será aumentado por :checked */
+  background: var(--primary-color);
+  border-radius: 4px;
+  transition: height .5s cubic-bezier(.2, .9, .3, 1);
+  z-index: 0;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, .08);
+}
+
+/* itens (labels) */
+.desc-1 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.roadmap-item {
+  display: none;
+  /* somente aparece quando permitido pelo CSS */
+  padding: .6rem 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  /* acima da linha */
+  transition: all .2s ease;
+  width: 220px;
+  text-align: center;
+}
+
+.roadmap-fim {
+  display: none;
+  /* somente aparece quando permitido pelo CSS */
+  padding: .6rem 1rem;
+  border: 2px solid var(--sucess-border-color);
+  border-radius: 10px;
+  background: var(--sucess-color);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  /* acima da linha */
+  transition: all .2s ease;
+  width: 220px;
+  text-align: center;
+}
+
+.roadmap-item:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-3px);
+}
+.roadmap-fim:hover {
+  transform: translateY(-3px);
+}
+
+/* inputs escondidos */
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+/* MOSTRAR primeiro item ao iniciar (start é irmão de .roadmap-container) */
+#start:checked~.roadmap-container .item-1 {
+  display: inline-block !important;
+  animation: fadeIn .35s ease;
+}
+
+/* mostrar linha ao iniciar */
+#start:checked~.roadmap-container .line-1 {
+  height: 56px;
+}
+
+/* Cada passo revela o próximo (os inputs estão antes dos labels) */
+#step1:checked~.item-2,
+#step2:checked~.item-3,
+#step3:checked~.item-4,
+#step4:checked~.item-5,
+#step5:checked~#fim {
+  display: inline-block;
+  animation: fadeIn .35s ease;
+}
+
+#step1:checked~desc-1 {
+  display: flex !important;
+}
+
+/* quando marcado, estilo do próprio item (input + label são adjacentes) */
+#step1:checked+.item-1,
+#step2:checked+.item-2,
+#step3:checked+.item-3,
+#step4:checked+.item-4,
+#step5:checked+.item-5 {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, .08);
+}
+
+/* Crescimento da linha conforme progresso (os valores são aproximados — ajuste ao seu gap/altura) */
+#step1:checked~.line-2 {
+  height: 120px;
+}
+
+#step2:checked~.line-3 {
+  height: 186px;
+}
+
+#step3:checked~.line-4 {
+  height: 262px;
+}
+
+#step4:checked~.line-5 {
+  height: 338px;
+}
+
+#step5:checked~.line-6 {
+  height: 422px;
+}
+
+/* animação entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 

@@ -106,7 +106,7 @@ header p {
 }
 
 /* ======================= */
-    /* RoadMap    */
+/* RoadMap    */
 /* =======================  */
 
 .roadmap {
@@ -121,11 +121,11 @@ header p {
 .btn-start {
   background: var(--primary-color);
   color: #fff;
-  padding: .7rem 1.1rem;
+  padding: 0.7rem 1.1rem;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 700;
-  box-shadow: 0 6px 18px rgba(59, 130, 246, .12);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.12);
   z-index: 3;
 }
 
@@ -146,20 +146,34 @@ header p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -17px;
+  top: 55px;
   /* distanciamento do topo do container */
   width: 6px;
   height: 0;
   /* começa com 0; será aumentado por :checked */
   background: var(--primary-color);
   border-radius: 4px;
-  transition: height .5s cubic-bezier(.2, .9, .3, 1);
+  transition: height 0.5s cubic-bezier(0.2, 0.9, 0.3, 1);
   z-index: 0;
-  box-shadow: 0 6px 18px rgba(59, 130, 246, .08);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.08);
+}
+
+.desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* itens (labels) */
-.desc-1 {
+.desc-start,
+.desc-1,
+.desc-2,
+.desc-3,
+.desc-4,
+.desc-5,
+.desc-6,
+.desc-fim {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -169,7 +183,7 @@ header p {
 .roadmap-item {
   display: none;
   /* somente aparece quando permitido pelo CSS */
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
   border: 2px solid var(--primary-color);
   border-radius: 10px;
   background: #fff;
@@ -178,7 +192,7 @@ header p {
   cursor: pointer;
   z-index: 2;
   /* acima da linha */
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   width: 220px;
   text-align: center;
 }
@@ -186,16 +200,16 @@ header p {
 .roadmap-fim {
   display: none;
   /* somente aparece quando permitido pelo CSS */
-  padding: .6rem 1rem;
-  border: 2px solid var(--sucess-border-color);
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
-  background: var(--sucess-color);
-  color: #fff;
+  background: #fff;
+  color: var(--primary-color);
   font-weight: 600;
   cursor: pointer;
   z-index: 2;
   /* acima da linha */
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   width: 220px;
   text-align: center;
 }
@@ -207,6 +221,14 @@ header p {
 }
 .roadmap-fim:hover {
   transform: translateY(-3px);
+  background: var(--sucess-color);
+  border: 2px solid var(--sucess-color);
+  color: #fff;
+}
+#fim:checked ~ .roadmap-fim {
+  background: var(--sucess-color) !important;
+  border: 2px solid var(--sucess-color) !important;
+  color: #fff;
 }
 
 /* inputs escondidos */
@@ -215,61 +237,95 @@ input[type="checkbox"] {
   left: -9999px;
 }
 
-/* MOSTRAR primeiro item ao iniciar (start é irmão de .roadmap-container) */
-#start:checked~.roadmap-container .item-1 {
-  display: inline-block !important;
-  animation: fadeIn .35s ease;
-}
-
-/* mostrar linha ao iniciar */
-#start:checked~.roadmap-container .line-1 {
-  height: 56px;
-}
-
 /* Cada passo revela o próximo (os inputs estão antes dos labels) */
-#step1:checked~.item-2,
-#step2:checked~.item-3,
-#step3:checked~.item-4,
-#step4:checked~.item-5,
-#step5:checked~#fim {
+#start:checked ~ .item-1,
+#step1:checked ~ .item-2,
+#step2:checked ~ .item-3,
+#step3:checked ~ .item-4,
+#step4:checked ~ .item-5,
+#step5:checked ~ .roadmap-fim {
   display: inline-block;
-  animation: fadeIn .35s ease;
+  animation: fadeIn 0.35s ease;
 }
 
-#step1:checked~desc-1 {
+#start:not(:checked) ~ .desc-start {
+  display: flex !important;
+}
+#start:checked ~ .desc-1 {
+  display: flex !important;
+}
+#step1:checked ~ .desc-1 {
+  display: none !important;
+}
+#step1:checked ~ .desc-2 {
+  display: flex !important;
+}
+#step2:checked ~ .desc-2 {
+  display: none !important;
+}
+#step2:checked ~ .desc-3 {
+  display: flex !important;
+}
+#step3:checked ~ .desc-3 {
+  display: none !important;
+}
+#step3:checked ~ .desc-4 {
+  display: flex !important;
+}
+#step4:checked ~ .desc-4 {
+  display: none !important;
+}
+#step4:checked ~ .desc-5 {
+  display: flex !important;
+}
+#step5:checked ~ .desc-5 {
+  display: none !important;
+}
+#step5:checked ~ .desc-6 {
+  display: flex !important;
+}
+#fim:checked ~ .desc-6 {
+  display: none !important;
+}
+#fim:checked ~ .desc-fim {
   display: flex !important;
 }
 
 /* quando marcado, estilo do próprio item (input + label são adjacentes) */
-#step1:checked+.item-1,
-#step2:checked+.item-2,
-#step3:checked+.item-3,
-#step4:checked+.item-4,
-#step5:checked+.item-5 {
+#step1:checked + .item-1,
+#step2:checked + .item-2,
+#step3:checked + .item-3,
+#step4:checked + .item-4,
+#step5:checked + .item-5,
+#fim:checked + .roadmap-fim {
   background: var(--primary-color);
   color: #fff;
   border-color: var(--primary-color);
-  box-shadow: 0 6px 18px rgba(59, 130, 246, .08);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.08);
 }
 
 /* Crescimento da linha conforme progresso (os valores são aproximados — ajuste ao seu gap/altura) */
-#step1:checked~.line-2 {
+#start:checked ~ .line-1 {
+  height: 54px;
+}
+
+#step1:checked ~ .line-2 {
   height: 120px;
 }
 
-#step2:checked~.line-3 {
+#step2:checked ~ .line-3 {
   height: 186px;
 }
 
-#step3:checked~.line-4 {
+#step3:checked ~ .line-4 {
   height: 262px;
 }
 
-#step4:checked~.line-5 {
+#step4:checked ~ .line-5 {
   height: 338px;
 }
 
-#step5:checked~.line-6 {
+#step5:checked ~ .line-6 {
   height: 422px;
 }
 
@@ -285,42 +341,6 @@ input[type="checkbox"] {
     transform: translateY(0);
   }
 }
-
-/* 
-=======================
-      Testes Dev   
-======================= 
-
-
-
-#instalacao{
-    display: flex;
-    position: absolute;
-    top: 33%;
-    left: 25%;
-    cursor: pointer;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.502);
-}
-
-
-#instalacao:hover{
-    text-shadow: 0 0 10px rgb(255, 255, 255);
-}
-
-.container-img{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-roadmap {
-  width: 100%;
-  height: auto;
-} */
 
 /* ======================= */
 /* Títulos e subtítulos     */
@@ -527,6 +547,14 @@ footer .footer-inner {
   padding: 16px 20px;
   text-align: center;
   font-size: 0.95rem;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row wrap;
 }
 
 .footer-links {

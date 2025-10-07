@@ -18,128 +18,128 @@
       </p>
     </header>
 
-      <main class="content">
-        <!-- Estamos cientes que o nav deve ficar fora do main para ser mais semantico, mas
-        achamos que ficaria melhor dentro do main para facilitar a navegação e a leitura do conteúdo. -->
-        <nav class="sidebar accordion">
-          <details open>
-            <summary>Conteúdo</summary>
-            <ul>
-              <li><a class="nav-tab" href="../index.html">Página inicial</a></li>
-              <li>
-                <a class="nav-tab" href="devc.html">0001-Instalação DevC++</a>
-              </li>
-              <li>
-                <a class="nav-tab active-nav" href="#">0002-Conceitos Básicos</a>
-              </li>
-              <li>
-                <a class="nav-tab" href="primeiro.html">0003-Primeiro Programa</a>
-              </li>
-              <li>
-                <a class="nav-tab" href="variaveis.html"
-                  >0004-Variáveis e Tipos</a
-                >
-              </li>
-              <li>
-                <a class="nav-tab" href="operadores.html">0005-Operadores em C</a>
-              </li>
-              <li>
-                <a class="nav-tab" href="estruturas.html"
-                  >0006-Estruturas de Controle</a
-                >
-              </li>
-              <li><a class="nav-tab" href="arrays.html">0007-Arrays</a></li>
-              <li><a class="nav-tab" href="funcoes.html">0008-Funções</a></li>
-              <li><a class="nav-tab" href="ponteiros.html">0009-Ponteiros</a></li>
-              <li><a class="nav-tab" href="stringsc.html">0010-Strings</a></li>
-              <li><a class="nav-tab" href="structs.html">0011-Structs</a></li>
-              <li>
-                <a class="nav-tab" href="projetos.html">0012-Projetos Práticos</a>
-              </li>
-            </ul>
-          </details>
-        </nav>
-        <!-- Área principal de conteúdo -->
-        <article>
-          <!-- Conteúdo: conceitos básicos da linguagem -->
-          <section id="arrays" class="tab-content active">
-            <h2 class="section-title">Conceitos Básicos</h2>
-            <p>
-              O que é C? C é uma linguagem de programação que permite criar
-              programas de computador, desde calculadoras simples até sistemas
-              mais complexos.
-              <br />
-              Estrutura de um programa Todo programa em C começa em um ponto
-              principal chamado main. É nele que o computador começa a executar o
-              código..
-            </p>
-          </section>
-          <!-- Bloco expositivo com exemplos simples -->
-          <section class="analogy-box">
-            <h3 class="analogy-title">Variáveis</h3>
-            <h4>
-              <strong
-                >Variáveis são como caixinhas que guardam informações. Por
-                exemplo:</strong
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <!-- Navegação lateral (índice do curso) em modo sanfona -->
+      <nav class="sidebar accordion">
+        <details open>
+          <summary>Conteúdo</summary>
+          <ul>
+            <li><a class="nav-tab" href="../index.html">Página inicial</a></li>
+            <li>
+              <a class="nav-tab" href="devc.html">0001-Instalação DevC++</a>
+            </li>
+            <li>
+              <a class="nav-tab active-nav" href="#">0002-Conceitos Básicos</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="primeiro.html">0003-Primeiro Programa</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="variaveis.html"
+                >0004-Variáveis e Tipos</a
               >
-            </h4>
-            <div class="code-container">
-              <h3 class="code-header">Exemplo: Dizer Olá!</h3>
-              <p class="code">
-                Números inteiros (int): 5, 10, -3 Números com vírgula (float):
-                3.14, 1.75 Letras (char): 'A', 'B'
-              </p>
-            </div>
-            <ol style="list-style-type: disc">
-              <h4><strong>Mostrar e receber informações</strong></h4>
-              <li>Para mostrar algo na tela, usamos printf.</li>
-              <li>Para receber informações do usuário, usamos scanf.</li>
-              <li>
-                Exemplo: “Digite sua idade” e o computador lê o número que você
-                digitar.
-              </li>
-            </ol>
-          </section>
-          <!-- Bloco expositivo com exemplos simples -->
-          <section class="analogy-box">
-            <h3 class="analogy-title">Operações, Decisões e Funções</h3>
-            <ol style="list-style-type: disc">
-              <h4>
-                <strong
-                  >Podemos fazer contas: soma, subtração, multiplicação e
-                  divisão.</strong
-                >
-              </h4>
-              <li>Podemos tomar decisões usando if (se) e else (senão).</li>
-              <li>Podemos repetir tarefas usando for ou while.</li>
-              <li>
-                E as Funções são pequenos blocos de código que realizam tarefas
-                específicas e podem ser reutilizados várias vezes.
-              </li>
-            </ol>
-          </section>
-        </article>
-      </main>
-      <!-- Rodapé com links úteis e créditos -->
-      <footer>
-        <section class="footer-inner">
-          <div>
-            <a href="#top" class="buttons-footer">Voltar ao topo</a>
-            <a href="./primeiro.html" class="buttons-footer"
-              >Proxima página: 0003-Primeiro Programa</a
-            >
-          </div>
-          <p><strong>Projeto:</strong> Roadmap Programação em C</p>
-          <p><strong>Professor:</strong> Luiz Almeida Júnior</p>
-          <p><strong>Equipe:</strong> Daniel, Fabrício, Ítalo, Samuel</p>
-          <p class="footer-links">
-            <a href="../index.html">Início</a>
-            |
-            <a href="./projetos.html">Projetos</a>
-            |
-            <a href="../LICENSE">Licença</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="operadores.html">0005-Operadores em C</a>
+            </li>
+            <li>
+              <a class="nav-tab" href="estruturas.html"
+                >0006-Estruturas de Controle</a
+              >
+            </li>
+            <li><a class="nav-tab" href="arrays.html">0007-Arrays</a></li>
+            <li><a class="nav-tab" href="funcoes.html">0008-Funções</a></li>
+            <li><a class="nav-tab" href="ponteiros.html">0009-Ponteiros</a></li>
+            <li><a class="nav-tab" href="stringsc.html">0010-Strings</a></li>
+            <li><a class="nav-tab" href="structs.html">0011-Structs</a></li>
+            <li>
+              <a class="nav-tab" href="projetos.html">0012-Projetos Práticos</a>
+            </li>
+          </ul>
+        </details>
+      </nav>
+      <!-- Área principal de conteúdo -->
+      <main>
+        <!-- Conteúdo: conceitos básicos da linguagem -->
+        <section id="arrays" class="tab-content active">
+          <h2 class="section-title">Conceitos Básicos</h2>
+          <p>
+            O que é C? C é uma linguagem de programação que permite criar
+            programas de computador, desde calculadoras simples até sistemas
+            mais complexos.
+            <br />
+            Estrutura de um programa Todo programa em C começa em um ponto
+            principal chamado main. É nele que o computador começa a executar o
+            código..
           </p>
         </section>
+        <!-- Bloco expositivo com exemplos simples -->
+        <section class="analogy-box">
+          <h3 class="analogy-title">Variáveis</h3>
+          <h4>
+            <strong
+              >Variáveis são como caixinhas que guardam informações. Por
+              exemplo:</strong
+            >
+          </h4>
+          <div class="code-container">
+            <h3 class="code-header">Exemplo: Dizer Olá!</h3>
+            <p class="code">
+              Números inteiros (int): 5, 10, -3 Números com vírgula (float):
+              3.14, 1.75 Letras (char): 'A', 'B'
+            </p>
+          </div>
+          <ol style="list-style-type: disc">
+            <h4><strong>Mostrar e receber informações</strong></h4>
+            <li>Para mostrar algo na tela, usamos printf.</li>
+            <li>Para receber informações do usuário, usamos scanf.</li>
+            <li>
+              Exemplo: “Digite sua idade” e o computador lê o número que você
+              digitar.
+            </li>
+          </ol>
+        </section>
+        <!-- Bloco expositivo com exemplos simples -->
+        <section class="analogy-box">
+          <h3 class="analogy-title">Operações, Decisões e Funções</h3>
+          <ol style="list-style-type: disc">
+            <h4>
+              <strong
+                >Podemos fazer contas: soma, subtração, multiplicação e
+                divisão.</strong
+              >
+            </h4>
+            <li>Podemos tomar decisões usando if (se) e else (senão).</li>
+            <li>Podemos repetir tarefas usando for ou while.</li>
+            <li>
+              E as Funções são pequenos blocos de código que realizam tarefas
+              específicas e podem ser reutilizados várias vezes.
+            </li>
+          </ol>
+        </section>
+      </main>
+    </div>
+    <!-- Rodapé com links úteis e créditos -->
+    <footer>
+      <section class="footer-inner">
+        <div>
+          <a href="#top" class="buttons-footer">Voltar ao topo</a>
+          <a href="./primeiro.html" class="buttons-footer"
+            >Proxima página: 0003-Primeiro Programa</a
+          >
+        </div>
+        <p><strong>Projeto:</strong> Roadmap Programação em C</p>
+        <p><strong>Professor:</strong> Luiz Almeida Júnior</p>
+        <p><strong>Equipe:</strong> Daniel, Fabrício, Ítalo, Samuel</p>
+        <p class="footer-links">
+          <a href="../index.html">Início</a>
+          |
+          <a href="./projetos.html">Projetos</a>
+          |
+          <a href="../LICENSE">Licença</a>
+        </p>
+      </section>
     </footer>
   </body>
 </html>

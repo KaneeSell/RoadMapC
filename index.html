@@ -92,24 +92,12 @@
               style="max-width: 200px; display: block; margin: 20px auto"
             />
           </section>
-          <!-- Descrição geral do material -->
-          <section>
-            <h3 class="subsection-title">Descrição</h3>
-            <p>
-              Este roadmap foi criado para ajudar quem está começando a aprender
-              Programação em C, de forma clara e passo a passo. Ele mostra o
-              caminho desde a instalação do programa até os conceitos básicos,
-              facilitando o aprendizado mesmo para quem nunca programou antes.
-            </p>
-          </section>
-
           <div class="roadmap">
-            <!-- botão iniciar -->
-            <input id="start" type="checkbox" />
-            <label for="start" class="btn-start">🚀 Iniciar Roadmap</label>
-
-            <!-- container com inputs/labels e, por fim, a linha -->
             <div class="roadmap-container">
+              <!-- botão iniciar -->
+              <input id="start" type="checkbox" />
+              <label for="start" class="btn-start">🚀 Iniciar Roadmap</label>
+
               <!-- linha vem por último NO DOM para ser alcançada pelos ~ -->
               <div class="roadmap-line line-1" aria-hidden="true"></div>
 
@@ -153,10 +141,106 @@
 
               <div class="roadmap-line line-6" aria-hidden="true"></div>
 
-              <!-- passo 5 -->
-              <h4 id="fim" class="roadmap-fim">🎉 FIM 🎉</h4>
+              <!-- FIM -->
+              <input id="fim" type="checkbox" />
+              <label for="fim" class="roadmap-fim">🎉 FIM 🎉</label>
+
+              <!-- descrição do inicio -->
+              <section class="desc desc-start">
+                <h3 class="subsection-title">Iniciar Roadmap</h3>
+                <p>
+                  Este roadmap foi criado para ajudar quem está começando a
+                  aprender Programação em C, de forma clara e passo a passo. Ele
+                  mostra o caminho desde a instalação do programa até os
+                  conceitos básicos, facilitando o aprendizado mesmo para quem
+                  nunca programou antes.
+                </p>
+              </section>
+              <!-- descrição do passo 1 -->
+              <section class="desc desc-1">
+                <h3 class="subsection-title">Instalação e Conceitos Básicos</h3>
+                <p>
+                  Neste passo, você vai preparar seu ambiente de desenvolvimento
+                  instalando o DevC++ e aprendendo os conceitos fundamentais da
+                  linguagem C, como sintaxe básica, compilação e execução de
+                  programas simples.
+                </p>
+                <a href="./pages/devc.html">0001-Instalação DevC++</a>
+                <a href="./pages/conceitos.html">0002-Conceitos Básicos</a>
+              </section>
+              <!-- descrição do passo 2 -->
+              <section class="desc desc-2">
+                <h3 class="subsection-title">Primeiro Programa e Variáveis</h3>
+                <p>
+                  Aqui, você escreverá seu primeiro programa completo e
+                  entenderá como armazenar e manipular dados usando variáveis e
+                  tipos de dados, base essencial para qualquer aplicação em C.
+                </p>
+                <a href="./pages/primeiro.html">0003-Primeiro Programa</a>
+                <a href="./pages/variaveis.html">0004-Variáveis e Tipos</a>
+              </section>
+              <!-- descrição do passo 3 -->
+              <section class="desc desc-3">
+                <h3 class="subsection-title">
+                  Operadores e Estruturas de Controle
+                </h3>
+                <p>
+                  Neste passo, você vai explorar operadores aritméticos, lógicos
+                  e relacionais, além das estruturas de decisão e repetição,
+                  permitindo controlar o fluxo dos programas de forma eficiente.
+                </p>
+                <a href="./pages/operadores.html">0005 - Operadores em C</a>
+                <a href="./pages/estruturas.html"
+                >0006-Estruturas de Controle</a
+                >
+              </section>
+              <!-- descrição do passo 4 -->
+              <section class="desc desc-4">
+                <h3 class="subsection-title">Arrays, Funções e Ponteiros</h3>
+                <p>
+                  Agora você começará a trabalhar com arrays para armazenar
+                  múltiplos valores, funções para modularizar seu código e
+                  ponteiros, conceito fundamental para manipulação de memória e
+                  desempenho.
+                </p>
+                <a href="./pages/arrays.html">0007-Arrays</a>
+                <a href="./pages/funcoes.html">0008-Funções</a>
+                <a href="./pages/ponteiros.html">0009-Ponteiros</a>
+              </section>
+              <!-- descrição do passo 5 -->
+              <section class="desc desc-5">
+                <h3 class="subsection-title">
+                  Strings, Structs e Projetos Práticos
+                </h3>
+                <p>
+                  No último passo, você aprenderá a manipular strings, organizar
+                  dados com structs e aplicar tudo o que aprendeu em projetos
+                  práticos, consolidando seus conhecimentos em situações reais.
+                </p>
+                <a href="./pages/stringsc.html">0010-Strings</a>
+                <a href="./pages/structs.html">0011-Structs</a>
+                <a href="./pages/projetos.html">0012-Projetos Práticos</a>
+              </section>
+              <!-- descrição do Fim -->
+              <section class="desc desc-6">
+                <h3 class="subsection-title">FIM</h3>
+                <p>
+                  Agora você sabe manipular strings, organizar dados com structs
+                  e aplicar tudo o que aprendeu em projetos práticos,
+                  consolidando seus conhecimentos em situações reais.
+                </p>
+              </section>
+              <!-- descrição de Parabenização -->
+              <section class="desc desc-fim">
+                <h3 class="subsection-title">PARABENS! 🎉</h3>
+                <p>
+                  Você concluiu todos os passos para aprender Programação em C,
+                  consolidando seus conhecimentos em situações reais.
+                </p>
+              </section>
             </div>
           </div>
+
           <!-- Créditos/Informações da equipe -->
           <section class="code-container">
             <h3 class="code-header">Informações da Equipe</h3>
@@ -171,7 +255,7 @@
     <!-- Rodapé com links úteis e créditos -->
     <footer class="site-footer" role="contentinfo">
       <section class="footer-inner">
-        <div>
+        <div class="footer-buttons">
           <a href="#top" class="buttons-footer">Voltar ao topo</a>
           <a href="./pages/devc.html" class="buttons-footer"
             >Proxima página: 0001-Instalação DevC++</a
